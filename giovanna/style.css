@@ -6,12 +6,25 @@
     margin: 0;   
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #0E1115;
     color: #EFECE7;
     font-family: "Poppins", sans-serif;
     font-weight: normal;
     font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
 }
 
 .location {
@@ -41,6 +54,38 @@ body {
     transition: transform 0.5s ease;
 }
 
+.navbar-hero a:hover, .navbar-header ul li a:hover {
+    color: #934FD7;
+    transition: 0.2s;
+}
+
+
+/* estilização do header */
+header {
+    position: absolute;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    justify-self: center;
+    background-color: #171A21;
+    padding: 1rem 5rem;
+    border: 1px solid #934FD7;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.navbar-header, .navbar-header ul {
+    display: flex;
+    gap: 4rem;
+}
+
+.logo-cega {
+    width: 60px;
+}
+
 
 /* estilização da hero */
 .section-hero {
@@ -54,16 +99,11 @@ body {
     justify-content: space-between;
 }
 
-.navbar {
+.navbar-hero {
     margin: 2rem;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.navbar a:hover {
+.navbar-hero a:hover {
     color: #934FD7;
     transition: 0.2s;
 }
@@ -104,4 +144,44 @@ body {
     padding-block: 1.5rem;
     border-top: 1px solid #7b819145;
     color: #7B8191;
+}
+
+
+/* responsividade */
+@media (max-width: 480px) {
+.section-about, .section-curiosities {
+    margin: 4rem 2rem;
+}
+
+header {
+    width: 70%;
+}
+
+.header {
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 1rem 2rem;
+}
+
+.navbar-header, .navbar-header ul {
+    gap: 1.5rem;
+}
+
+.logo-cega {
+    width: 50px;
+}
+
+.section-hero {
+    min-height: 60vh;
+}
+
+.navbar-hero {
+    display: none;
+}
+
+.content-hero {
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 45%;
+}
 }
