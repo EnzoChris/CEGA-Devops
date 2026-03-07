@@ -9,8 +9,6 @@ body {
     background-color: #0E1115;
     color: #EFECE7;
     font-family: "Poppins", sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 
 main {
@@ -20,7 +18,7 @@ main {
     "chris giovanna";
     justify-content: center;
     gap: 4rem;
-    margin: 4rem;
+    margin: 6rem 4rem 4rem 4rem;
 }
 
 a {
@@ -54,18 +52,19 @@ header {
     border: 1px solid #737580;
     border-radius: 1rem;
     display: flex;
-    transition: 0.5s;
-    width: 600px;
+    width: 35rem;
+    transition: 0.4s ease;
 }
 
 .aluno:hover {
-    transition: 0.3s ease;
+    transform: scale(1.01);
 }
 
 .aluno-fundo {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    object-fit: cover
+    object-fit: cover;
+    width: 40%;
 }
 
 .aluno .content {
@@ -81,6 +80,10 @@ header {
     gap: 1rem;
 }
 
+.aluno-nome img {
+    width: 30px;
+}
+
 .aluno-location {
     display: flex;
     align-items: center;
@@ -88,22 +91,31 @@ header {
 }
 
 .aluno-location .icon {
-    width: 15px;
+    width: 12px;
 }
 
 .destino {
     color: #737580;
+    transition: 0.2s ease;
 }
 
 .destino:hover {
     color: #575961;
-    transition: 0.2s ease;
 }
 
 
 /* estilizar section do chris */
 #chris {
     grid-area: chris;
+}
+
+#chris:hover {
+    border-color: #9A9898;
+    box-shadow: 0 0 12px #9a9898b7;
+}
+
+#chris .aluno-location span{
+    color: #9A9898;
 }
 
 
@@ -114,6 +126,11 @@ header {
 
 #casares:hover {
     border-color: #47A7FE;
+    box-shadow: 0 0 12px #47a6feb4;
+}
+
+#casares .aluno-location span{
+    color: #47A7FE;
 }
 
 
@@ -131,10 +148,6 @@ header {
     color: #934FD7;
 }
 
-#giovanna .aluno-fundo{
-    width: 40%;
-}
-
 
 /* estilizar section do artur */
 #artur {
@@ -143,6 +156,11 @@ header {
 
 #artur:hover{
     border-color: #FF1B5A;
+    box-shadow: 0 0 12px #ff1b5cb5;
+}
+
+#artur .aluno-location span{
+    color: #FF1B5A;
 }
 
 
@@ -152,4 +170,30 @@ header {
     padding-block: 1.5rem;
     border-top: 1px solid #7b819145;
     color: #7B8191;
+}
+
+/* responsividade - celular */
+@media (max-width: 480px) {
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 1.5rem 2rem 1.5rem;
+    gap: 2rem;
+}
+
+header {
+    min-height: 60vh;
+}
+
+.logo-cega  {
+    width: 300px;
+}
+
+.aluno {
+    width: 100%;
+}
+
+.content p {
+    display: none;
+}
 }
