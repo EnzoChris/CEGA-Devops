@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* estilos gerais */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #0E1115;
+    color: #EFECE7;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "artur casares"
+    "chris giovanna";
+    justify-content: center;
+    gap: 4rem;
+    margin: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* estilização da hero */
+header {
+    min-height: 70vh;
+    background-image: linear-gradient(#00000000, #0e1115), url("../img/map.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo-cega {
+    width: 400px;
+    cursor: pointer;
+}
+
+
+/* estilização geral das sections */
+.title-section {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.title-section::before,
+.title-section::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #7b819145;
+}
+
+.title-section h2 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: #7B8191;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.aluno {
+    background-color: #171A21;
+    border: 1px solid #737580;
+    border-radius: 1rem;
+    display: flex;
+    width: 35rem;
+    transition: 0.4s ease;
+}
+
+.aluno:hover {
+    transform: scale(1.01);
+}
+
+.aluno-fundo {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    object-fit: cover;
+    width: 40%;
+}
+
+.aluno .content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aluno-nome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.aluno-nome img {
+    width: 30px;
+}
+
+.aluno-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aluno-location .icon {
+    width: 12px;
+}
+
+.destino {
+    color: #737580;
+    transition: 0.2s ease;
+}
+
+.destino:hover {
+    color: #575961;
+}
+
+
+/* estilizar section do chris */
+#chris {
+    grid-area: chris;
+}
+
+#chris:hover {
+    border-color: #9A9898;
+    box-shadow: 0 0 12px #9a9898b7;
+}
+
+#chris .aluno-location span {
+    color: #9A9898;
+}
+
+
+/* estilizar section do casares */
+#casares {
+    grid-area: casares;
+}
+
+#casares:hover {
+    border-color: #47A7FE;
+    box-shadow: 0 0 12px #47a6feb4;
+}
+
+#casares .aluno-location span {
+    color: #47A7FE;
+}
+
+
+/* estilizar section da giovanna */
+#giovanna {
+    grid-area: giovanna;
+}
+
+#giovanna:hover {
+    border-color: #934FD7;
+    box-shadow: 0 0 12px #934fd7bc;
+}
+
+#giovanna .aluno-location span {
+    color: #934FD7;
+}
+
+
+/* estilizar section do artur */
+#artur {
+    grid-area: artur;
+}
+
+#artur:hover {
+    border-color: #FF1B5A;
+    box-shadow: 0 0 12px #ff1b5cb5;
+}
+
+#artur .aluno-location span {
+    color: #FF1B5A;
+}
+
+
+/* estilização do footer */
+.footer {
+    text-align: center;
+    padding-block: 1.5rem;
+    border-top: 1px solid #7b819145;
+    color: #7B8191;
+}
+
+
+/* responsividade - celular */
+@media (max-width: 480px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 1.5rem 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    header {
+        min-height: 60vh;
+    }
+
+    .logo-cega {
+        width: 300px;
+    }
+
+    .aluno {
+        width: 100%;
+    }
+
+    .content p {
+        display: none;
+    }
+
+    .aluno:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: #737580;
+    }
+
+    .aluno:active {
+        transform: scale(0.98);
+    }
+
+    #chris:active {
+        border-color: #9A9898;
+        box-shadow: 0 0 12px #9a9898b7;
+    }
+
+    #casares:active {
+        border-color: #47A7FE;
+        box-shadow: 0 0 12px #47a6feb4;
+    }
+
+    #giovanna:active {
+        border-color: #934FD7;
+        box-shadow: 0 0 12px #934fd7bc;
+    }
+
+    #artur:active {
+        border-color: #FF1B5A;
+        box-shadow: 0 0 12px #ff1b5cb5;
+    }
+
+}

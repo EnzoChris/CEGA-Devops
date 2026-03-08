@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* estilos gerais */
+* {
+    padding: 0;
+    margin: 0;   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0E1115;
+    color: #EFECE7;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol {
+    list-style: none;
+    counter-reset: lista;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.location {
+    color: #934FD7;
+}
+
+.title-about {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-about, .section-curiosities {
+    background-color: #171A21;
+    border: 1px solid #934FD7;
+    border-radius: 1rem;
+    margin: 4rem 12rem;
+    padding: 2rem;
+    transition: 0.5s ease;
+}
+
+.section-about:hover, .section-curiosities:hover {
+    border-color: #c68cff;
+    box-shadow: 0 0 12px #934fd7bc;
+    transform: scale(1.01);
+}
+
+.navbar-hero a, .navbar-header ul li a {
+    transition: 0.2s;
+}
+
+.navbar-hero a:hover, .navbar-header ul li a:hover {
+    color: #934FD7;
+}
+
+
+/* estilização do header */
+header {
+    position: absolute;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    justify-self: center;
+    background-color: #171A21;
+    padding: 1rem 5rem;
+    border: 1px solid #934FD7;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.navbar-header, .navbar-header ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.logo-cega {
+    width: 60px;
+}
+
+
+/* estilização da hero */
+.section-hero {
+    min-height: 70vh;
+    background-image: linear-gradient(#00000000, #0e1115), url("../img/grecia.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar-hero {
+    margin: 2rem;
+}
+
+.content-hero {
+    margin: 2rem 12rem;
+}
+
+.content-hero h1 {
+    font-size: 3rem;
+}
+
+.location-hero {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-hero .icon {
+    width: 12px;
+}
+
+
+/* estilização da section de sobre */
+.content-about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* estilização da section de curiosidades */
+.content-curiosities li {
+    counter-increment: lista;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #171A21;
+    border-radius: 0.5rem;
+}
+
+.content-curiosities li::before {
+    content: counter(lista);
+    background-color: #2a1f38;
+    color: #934FD7;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+/* estilização do footer */
+.footer {
+    text-align: center;
+    padding-block: 1.5rem;
+    border-top: 1px solid #7b819145;
+    color: #7B8191;
+}
+
+
+/* responsividade - celular */
+@media (max-width: 480px) {
+
+    .section-about, .section-curiosities {
+        margin: 4rem 2rem;
+    }
+
+    header {
+        width: 70%;
+    }
+
+    .header {
+        transform: translateX(-50%);
+        left: 50%;
+        padding: 1rem 2rem;
+    }
+
+    .navbar-header, .navbar-header ul {
+        gap: 1.5rem;
+    }
+
+    .logo-cega {
+        width: 50px;
+    }
+
+    .section-hero {
+        min-height: 60vh;
+    }
+
+    .navbar-hero {
+        display: none;
+    }
+
+    .content-hero {
+        position: absolute;
+        margin-left: 2rem;
+        bottom: 45%;
+    }
+
+    .content-curiosities li::before {
+        margin-top: 0.4rem;
+    }
+
+}
