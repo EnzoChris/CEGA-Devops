@@ -95,7 +95,7 @@ header {
 /* estilização da hero */
 .section-hero {
     min-height: 70vh;
-    background-image: linear-gradient(#00000000, #0e1115), url("img/grecia.png");
+    background-image: linear-gradient(#00000000, #0e1115), url("../img/grecia.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
