@@ -12,7 +12,7 @@ html{
 }
 
 main{
-    height: 200vh;
+    height: 100%;
     background-color: var(--blacker-red);
 }
 
@@ -76,10 +76,6 @@ header {
     font-size: 30px;
 }
 
-#sobre ul{
-    list-style-type: none;
-}
-
 .descr-1{
     display: flex;
     align-items: center;
@@ -105,4 +101,20 @@ header {
 
 .aluno h1{
     font-size: 50px;
+}
+
+.curiosidades{
+    margin: 30px;
+    font-size: 20px;
+}
+
+.curiosidades ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 10px;
+}
+
+.curiosidades ul p{
+    text-align: justify;
 }
