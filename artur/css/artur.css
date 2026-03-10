@@ -96,26 +96,34 @@ header {
     background-color: var(--blacker-red);
     padding: 30px;
     border-radius: 30px;
-    border: solid var(--red)
+    border: solid var(--red);
+
+    display: grid;
+    gap: 10px;
 }
 
 .aluno h1{
     font-size: 50px;
 }
 
-.curiosidades{
+.aluno div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#curiosidades{
     margin: 30px;
     font-size: 20px;
 }
 
-.curiosidades ul{
+#curiosidades ul{
     display: flex;
     flex-direction: column;
     gap: 25px;
     margin: 10px;
 }
 
-.curiosidades ul p{
+#curiosidades ul p{
     text-align: justify;
 }
 
